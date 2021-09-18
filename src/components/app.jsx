@@ -16,8 +16,10 @@ class App extends Component {
     this.selectGif = this.selectGif.bind(this);
   }
 
+
   search = (query) => {
-    giphy('C1vXWS2OKAHc8s2BrRN1lqVAl9OcM4NQ').search({
+    const giphyAPIKey = 'C1vXWS2OKAHc8s2BrRN1lqVAl9OcM4NQ';
+    giphy(giphyAPIKey).search({
       q: query,
       rating: 'g',
       limit: 10
