@@ -16,7 +16,16 @@ class SearchBar extends Component {
     this.props.searchFunction(event.target.value)
   }
 
+  componentWillMount() {
+    console.log("Will mount")
+  }
+  componentDidMount() {
+    console.log("Did mount")
+  }
+
   render() {
+    console.log("render")
+
     return (
       <input value={this.state.term} type="text" className="form-control form-search"
         onChange={this.handleUpdate}
