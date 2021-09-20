@@ -10,6 +10,10 @@ class Gif extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.id !== this.props.is;
+  }
+
   handleClick = () => {
     if (this.props.selectGif) {
       this.props.selectGif(this.props.id)
